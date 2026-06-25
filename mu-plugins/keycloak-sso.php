@@ -5,7 +5,7 @@
 if (!defined('ABSPATH')) exit;
 
 define('OIDC_KC_BASE', getenv('OIDC_KC_BASE') ?: '');
-define('OIDC_CLIENT_ID', 'wordpress');
+define('OIDC_CLIENT_ID', getenv('OIDC_CLIENT_ID') ?: 'wordpress');
 define('OIDC_CLIENT_SECRET', getenv('OIDC_CLIENT_SECRET') ?: '');
 // Page d'atterrissage unifiée post-déconnexion (SPA onboarding). Surchargée
 // via l'env LOGOUT_DONE_URL ; défaut = la plateforme partagée.
